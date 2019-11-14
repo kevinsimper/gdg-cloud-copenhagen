@@ -4,8 +4,50 @@
     <meta charset="utf-8" />
     <title>GDG Cloud Copenhagen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style media="screen">
+      html,
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+    </style>
   </head>
   <body>
-    <h1>GDG Cloud Copenhagen</h1>
+    <div id="app">
+      <style media="screen">
+        #app {
+          grid-template-areas:
+            "header"
+            "main"
+            "footer";
+          justify-items: center;
+        }
+      </style>
+      <x-header></x-header>
+      <div class="page-container">
+        <style media="screen">
+          .page-container {
+            grid-area: main;
+          }
+          .page {
+            max-width: 800px;
+            margin: 0 auto;
+          }
+        </style>
+        <div class="page">
+          <h1>Welcome to GDG Cloud Copenhagen</h1>
+          <h2>
+            We are a developer community meetup group in Copenhagen focusing on
+            Cloud and how we can use it.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./components/header.js"></script>
   </body>
 </html>
